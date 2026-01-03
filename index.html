@@ -169,5 +169,43 @@ document.addEventListener('contextmenu', function(e) {
   e.preventDefault();
 });
 </script>
+    <!-- BOOKING BUTTON (anywhere on page) -->
+<button id="openBooking" class="btn">
+  Book Now
+</button>
+
+<!-- OVERLAY -->
+<div id="babe_overlay"></div>
+
+<!-- POPUP CONTAINER -->
+<div id="babe_overlay_container">
+  <div class="babe_overlay_inner">
+
+    <button class="close" id="closePopup">&times;</button>
+
+    <h1>Book Your Kashmir Trip</h1>
+
+    <form id="bookingForm">
+      <input type="text" id="name" placeholder="Full Name" required><br><br>
+      <input type="tel" id="phone" placeholder="Phone Number" required><br><br>
+      <input type="date" id="date" required><br><br>
+
+      <select id="package" required>
+        <option value="">Select Package</option>
+        <option>Srinagar to Srinagar – Honeymoon</option>
+        <option>Jammu to Jammu – Honeymoon</option>
+        <option>Family – Srinagar</option>
+        <option>Family – Jammu</option>
+      </select><br><br>
+
+      <textarea id="message" placeholder="Special request (optional)"></textarea><br><br>
+
+      <button type="submit" class="purchase-success-button">
+        Send to WhatsApp
+      </button>
+    </form>
+
+  </div>
+</div>
 </body>
 </html>
