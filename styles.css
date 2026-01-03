@@ -75,22 +75,41 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 5rem 1rem 2rem;
-    background-color: #ecf0f1;
+    background-image: url('https://source.unsplash.com/featured/?kashmir,mountains'); /* Example: Kashmir mountains background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     margin-top: 60px;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay for text readability */
+    z-index: 1;
 }
 
 .hero-content {
     max-width: 50%;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-content h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: white; /* Ensure text is visible on background */
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 1rem;
+    color: white;
 }
 
 .btn {
@@ -111,6 +130,8 @@ nav {
     max-width: 45%;
     height: auto;
     border-radius: 10px;
+    position: relative;
+    z-index: 2;
 }
 
 /* Packages Section */
@@ -186,18 +207,37 @@ nav {
     padding: 2rem 1rem;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: white;
+    background-image: url('https://source.unsplash.com/featured/?kashmir,valley'); /* Example: Kashmir valley background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.testimonials::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.9); /* Light overlay for readability */
+    z-index: 1;
 }
 
 .testimonials h2 {
     text-align: center;
     margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
 }
 
 .testimonial-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
+    position: relative;
+    z-index: 2;
 }
 
 .testimonial-card {
@@ -261,10 +301,30 @@ nav {
 
 /* Footer */
 footer {
-    background-color: #2c3e50;
+    background-image: url('https://source.unsplash.com/featured/?kashmir,night'); /* Example: Kashmir night sky background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
     text-align: center;
     padding: 2rem 1rem;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for text */
+    z-index: 1;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 2;
 }
 
 .footer-content h3 {
