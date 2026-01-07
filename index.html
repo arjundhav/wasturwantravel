@@ -3,609 +3,482 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wasturwan Travels | Kashmir Tour Packages</title>
+    <title>Wasturwan Travels</title>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Font -->
+    <!-- Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Custom styles (modern UI) -->
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <link rel="stylesheet" href="styles.css" />
-
-    <style>
-      :root {
-        --primary: #0f766e; /* teal-700 */
-        --accent: #f59e0b; /* amber-500 */
-        --muted: #0f172a; /* slate-900 */
-        --card: #ffffff;
-      }
-
-      body {
-        font-family: "Poppins", sans-serif;
-        color: var(--muted);
-        background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
-      }
-
-      .btn-primary {
-        background: linear-gradient(90deg, var(--accent), #fbbf24);
-        color: #08121a;
-      }
-
-      .card-hover {
-        transition: transform 0.25s ease, box-shadow 0.25s ease;
-      }
-      .card-hover:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
-      }
-
-      .glass {
-        backdrop-filter: blur(6px);
-        background: rgba(255, 255, 255, 0.6);
-      }
-
-      .whatsapp-float {
-        box-shadow: 0 10px 30px rgba(16, 185, 129, 0.18);
-      }
-      .badge-price {
-        background: linear-gradient(90deg, #06b6d4, #0ea5a4);
-        color: white;
-      }
-
-      .gradient-text {
-        background: linear-gradient(90deg, #0ea5a4, #06b6d4);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-      }
-    </style>
   </head>
-
-  <body class="bg-gray-50 text-gray-800">
-    <!-- HEADER -->
-    <header>
-      <div class="container nav">
-        <div class="brand" style="display: flex; align-items: center">
-          <img
-            src="images/Logo.jpg"
-            alt="Wasturwan Travels Logo"
-            style="height: 40px; margin-right: 10px"
-          />
-          Wasturwan Travels
-        </div>
-        <nav class="nav-links" id="navLinks">
-          <a href="#">Home</a>
-          <a href="#packages">Packages</a>
-          <a href="#vehicles">Vehicles</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <div>
-          <a href="#packages" class="nav-cta">Explore</a>
-          <button id="hamburger" class="hamburger" aria-label="Toggle menu">
-            ☰
-          </button>
-        </div>
-      </div>
-    </header>
-
-    <!-- HERO -->
-    <section
-      class="hero reveal"
-      style="background-image: url('images/kashmir-.jpg')"
-    >
-      <div class="hero-inner container">
-        <h1 class="gradient-text">Discover the Beauty of Kashmir</h1>
-        <p>Honeymoon • Family • Group Tours with Local Experts</p>
-        <div style="margin-top: 18px">
-          <a href="#packages" class="cta btn-primary">Explore Packages</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- CATEGORIES -->
-    <section class="reveal">
+  <body>
+    <!-- Top Info Bar -->
+    <div class="top-info">
       <div class="container">
-        <h2 class="section-title">Holiday Categories</h2>
-        <div class="grid cols-4">
-          <div class="card glass reveal">💑 Honeymoon</div>
-          <div class="card glass reveal">👨‍👩‍👧‍👦 Family</div>
-          <div class="card glass reveal">🏔 Adventure</div>
-          <div class="card glass reveal">🚌 Group Tours</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PACKAGES -->
-    <section id="packages" class="reveal">
-      <div class="container">
-        <h2 class="section-title">Popular Tour Packages</h2>
-        <div class="slider-container">
-          <div class="slider">
-            <div class="slide card reveal">
-              <img
-                src="images/kashmir-.jpg"
-                alt="Srinagar Package"
-                class="package-img"
-              />
-              <h3 style="font-weight: 700">Srinagar to Srinagar</h3>
-              <p class="text-muted">5 Days / 4 Nights</p>
-              <p style="margin: 10px 0">
-                <span class="price-badge">₹24,999</span>
-                <span class="text-muted">/ Couple</span>
-              </p>
-              <p>✔ Shikara Ride</p>
-              <div style="margin-top: 12px">
-                <button
-                  class="btn-primary w-full openBooking"
-                  data-package="Srinagar to Srinagar | 5D/4N | ₹24,999"
-                >
-                  Book Now
-                </button>
-              </div>
-            </div>
-            <div class="slide card reveal">
-              <img
-                src="images/GettyImages-1432005421-5c0bc8d84cedfd0001fa5acb.jpeg"
-                alt="Jammu Package"
-                class="package-img"
-              />
-              <h3 style="font-weight: 700">Jammu to Jammu</h3>
-              <p class="text-muted">6 Days / 5 Nights</p>
-              <p style="margin: 10px 0">
-                <span class="price-badge">₹32,999</span>
-                <span class="text-muted">/ Couple</span>
-              </p>
-              <p>✔ Shikara Ride</p>
-              <div style="margin-top: 12px">
-                <button
-                  class="btn-primary w-full openBooking"
-                  data-package="Jammu to Jammu | 6D/5N | ₹32,999"
-                >
-                  Book Now
-                </button>
-              </div>
-            </div>
-            <div class="slide card reveal">
-              <img
-                src="images/kashmir-family.jpg"
-                alt="Family Suit Srinagar Package"
-                class="package-img"
-              />
-              <h3 style="font-weight: 700">Family Suit Srinagar</h3>
-              <p class="text-muted">6 Days / 5 Nights</p>
-              <p style="margin: 10px 0">
-                <span class="price-badge">₹9,999</span>
-                <span class="text-muted">/ Person</span>
-              </p>
-              <p>✔ Shikara Ride</p>
-              <div style="margin-top: 12px">
-                <button
-                  class="btn-primary w-full openBooking"
-                  data-package="Family Suit Srinagar | 6D/5N | ₹9,999"
-                >
-                  Book Now
-                </button>
-              </div>
-            </div>
-            <div class="slide card reveal">
-              <img
-                src="images/GettyImages-1432005421-5c0bc8d84cedfd0001fa5acb.jpeg"
-                alt="Family Suit Jammu Package"
-                class="package-img"
-              />
-              <h3 style="font-weight: 700">Family Suit Jammu</h3>
-              <p class="text-muted">6 Days / 5 Nights</p>
-              <p style="margin: 10px 0">
-                <span class="price-badge">₹13,999</span>
-                <span class="text-muted">/ Person</span>
-              </p>
-              <p>✔ Shikara Ride</p>
-              <div style="margin-top: 12px">
-                <button
-                  class="btn-primary w-full openBooking"
-                  data-package="Family Suit Jammu | 6D/5N | ₹13,999"
-                >
-                  Book Now
-                </button>
-              </div>
-            </div>
-          </div>
-          <button class="slider-btn prev">&lt;</button>
-          <button class="slider-btn next">&gt;</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- VEHICLES -->
-    <section id="vehicles" class="reveal">
-      <div class="container">
-        <h2 class="section-title">Cab & Traveller Services</h2>
-        <div class="grid cols-4">
-          <div class="card reveal">
-            <h4 style="font-weight: 700; margin-bottom: 8px">
-              🚐 Tempo Traveller 14 Seater
-            </h4>
-            <p class="text-muted">Srinagar to Srinagar: ₹4000/day</p>
-            <p class="text-muted">Jammu to Jammu: ₹5500/day</p>
-            <div
-              style="
-                margin-top: 12px;
-                display: flex;
-                flex-direction: column;
-                gap: 8px;
-              "
-            >
-              <button
-                class="btn-primary w-full openBooking"
-                data-package="Cab: Tempo Traveller 14 Seater | Srinagar to Srinagar | ₹4000/day"
-              >
-                Book Srinagar
-              </button>
-              <button
-                class="btn-primary w-full openBooking"
-                data-package="Cab: Tempo Traveller 14 Seater | Jammu to Jammu | ₹5500/day"
-              >
-                Book Jammu
-              </button>
-            </div>
-          </div>
-          <div class="card reveal">
-            <h4 style="font-weight: 700; margin-bottom: 8px">
-              🚐 Tempo Traveller 17 Seater
-            </h4>
-            <p class="text-muted">Srinagar to Srinagar: ₹5000/day</p>
-            <p class="text-muted">Jammu to Jammu: ₹6500/day</p>
-            <div
-              style="
-                margin-top: 12px;
-                display: flex;
-                flex-direction: column;
-                gap: 8px;
-              "
-            >
-              <button
-                class="btn-primary w-full openBooking"
-                data-package="Cab: Tempo Traveller 17 Seater | Srinagar to Srinagar | ₹5000/day"
-              >
-                Book Srinagar
-              </button>
-              <button
-                class="btn-primary w-full openBooking"
-                data-package="Cab: Tempo Traveller 17 Seater | Jammu to Jammu | ₹6500/day"
-              >
-                Book Jammu
-              </button>
-            </div>
-          </div>
-          <div class="card reveal">
-            <h4 style="font-weight: 700; margin-bottom: 8px">
-              🚐 Tempo Traveller 21 Seater
-            </h4>
-            <p class="text-muted">Srinagar to Srinagar: ₹5500/day</p>
-            <p class="text-muted">Jammu to Jammu: ₹6500/day</p>
-            <div
-              style="
-                margin-top: 12px;
-                display: flex;
-                flex-direction: column;
-                gap: 8px;
-              "
-            >
-              <button
-                class="btn-primary w-full openBooking"
-                data-package="Cab: Tempo Traveller 21 Seater | Srinagar to Srinagar | ₹5500/day"
-              >
-                Book Srinagar
-              </button>
-              <button
-                class="btn-primary w-full openBooking"
-                data-package="Cab: Tempo Traveller 21 Seater | Jammu to Jammu | ₹6500/day"
-              >
-                Book Jammu
-              </button>
-            </div>
-          </div>
-          <div class="card reveal">
-            <h4 style="font-weight: 700; margin-bottom: 8px">
-              🚐 Tempo 26 Seater
-            </h4>
-            <p class="text-muted">Srinagar to Srinagar: ₹6000/day</p>
-            <p class="text-muted">Jammu to Jammu: ₹7500/day</p>
-            <div
-              style="
-                margin-top: 12px;
-                display: flex;
-                flex-direction: column;
-                gap: 8px;
-              "
-            >
-              <button
-                class="btn-primary w-full openBooking"
-                data-package="Cab: Tempo 26 Seater | Srinagar to Srinagar | ₹6000/day"
-              >
-                Book Srinagar
-              </button>
-              <button
-                class="btn-primary w-full openBooking"
-                data-package="Cab: Tempo 26 Seater | Jammu to Jammu | ₹7500/day"
-              >
-                Book Jammu
-              </button>
-            </div>
-          </div>
-          <div class="card reveal">
-            <h4 style="font-weight: 700; margin-bottom: 8px">
-              🚗 Innova Crysta
-            </h4>
-            <p class="text-muted">Srinagar to Srinagar: ₹4000/day</p>
-            <p class="text-muted">Jammu to Jammu: ₹5000/day</p>
-            <div
-              style="
-                margin-top: 12px;
-                display: flex;
-                flex-direction: column;
-                gap: 8px;
-              "
-            >
-              <button
-                class="btn-primary w-full openBooking"
-                data-package="Cab: Innova Crysta | Srinagar to Srinagar | ₹4000/day"
-              >
-                Book Srinagar
-              </button>
-              <button
-                class="btn-primary w-full openBooking"
-                data-package="Cab: Innova Crysta | Jammu to Jammu | ₹5000/day"
-              >
-                Book Jammu
-              </button>
-            </div>
-          </div>
-          <div class="card reveal">
-            <h4 style="font-weight: 700; margin-bottom: 8px">🚗 Innova</h4>
-            <p class="text-muted">Srinagar to Srinagar: ₹3500/day</p>
-            <p class="text-muted">Jammu to Jammu: ₹4500/day</p>
-            <div
-              style="
-                margin-top: 12px;
-                display: flex;
-                flex-direction: column;
-                gap: 8px;
-              "
-            >
-              <button
-                class="btn-primary w-full openBooking"
-                data-package="Cab: Innova | Srinagar to Srinagar | ₹3500/day"
-              >
-                Book Srinagar
-              </button>
-              <button
-                class="btn-primary w-full openBooking"
-                data-package="Cab: Innova | Jammu to Jammu | ₹4500/day"
-              >
-                Book Jammu
-              </button>
-            </div>
-          </div>
-          <div class="card reveal">
-            <h4 style="font-weight: 700; margin-bottom: 8px">🚙 Ertiga</h4>
-            <p class="text-muted">Srinagar to Srinagar: ₹3000/day</p>
-            <p class="text-muted">Jammu to Jammu: ₹4000/day</p>
-            <div
-              style="
-                margin-top: 12px;
-                display: flex;
-                flex-direction: column;
-                gap: 8px;
-              "
-            >
-              <button
-                class="btn-primary w-full openBooking"
-                data-package="Cab: Ertiga | Srinagar to Srinagar | ₹3000/day"
-              >
-                Book Srinagar
-              </button>
-              <button
-                class="btn-primary w-full openBooking"
-                data-package="Cab: Ertiga | Jammu to Jammu | ₹4000/day"
-              >
-                Book Jammu
-              </button>
-            </div>
-          </div>
-          <div class="card reveal">
-            <h4 style="font-weight: 700; margin-bottom: 8px">🚗 Sedan</h4>
-            <p class="text-muted">Srinagar to Srinagar: ₹2500/day</p>
-            <p class="text-muted">Jammu to Jammu: ₹3500/day</p>
-            <div
-              style="
-                margin-top: 12px;
-                display: flex;
-                flex-direction: column;
-                gap: 8px;
-              "
-            >
-              <button
-                class="btn-primary w-full openBooking"
-                data-package="Cab: Sedan | Srinagar to Srinagar | ₹2500/day"
-              >
-                Book Srinagar
-              </button>
-              <button
-                class="btn-primary w-full openBooking"
-                data-package="Cab: Sedan | Jammu to Jammu | ₹3500/day"
-              >
-                Book Jammu
-              </button>
-            </div>
-          </div>
-          <div class="card reveal">
-            <h4 style="font-weight: 700; margin-bottom: 8px">🚘 Fortuner</h4>
-            <p class="text-muted">Srinagar to Srinagar: ₹6000/day</p>
-            <p class="text-muted">Jammu to Jammu: ₹8000/day</p>
-            <div
-              style="
-                margin-top: 12px;
-                display: flex;
-                flex-direction: column;
-                gap: 8px;
-              "
-            >
-              <button
-                class="btn-primary w-full openBooking"
-                data-package="Cab: Fortuner | Srinagar to Srinagar | ₹6000/day"
-              >
-                Book Srinagar
-              </button>
-              <button
-                class="btn-primary w-full openBooking"
-                data-package="Cab: Fortuner | Jammu to Jammu | ₹8000/day"
-              >
-                Book Jammu
-              </button>
-            </div>
-          </div>
-          <div class="card reveal">
-            <h4 style="font-weight: 700; margin-bottom: 8px">
-              🚐 Urbania Force
-            </h4>
-            <p class="text-muted">Srinagar to Srinagar: ₹6000/day</p>
-            <p class="text-muted">Jammu to Jammu: ₹8000/day</p>
-            <div
-              style="
-                margin-top: 12px;
-                display: flex;
-                flex-direction: column;
-                gap: 8px;
-              "
-            >
-              <button
-                class="btn-primary w-full openBooking"
-                data-package="Cab: Urbania Force | Srinagar to Srinagar | ₹6000/day"
-              >
-                Book Srinagar
-              </button>
-              <button
-                class="btn-primary w-full openBooking"
-                data-package="Cab: Urbania Force | Jammu to Jammu | ₹8000/day"
-              >
-                Book Jammu
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="reveal">
-      <div class="container center">
-        <h2 class="section-title">Contact Us</h2>
-        <p class="text-muted">📍 Name - Muddasir Mukhtar</p>
-        <p class="text-muted">📞 Mobile No. - +91 7006594976</p>
-        <p class="text-muted">📍 office Telphone no. - 9103001854</p>
-        <p style="margin-top: 10px">📧 wasturwantravels@gmail.com</p>
-        <p class="text-muted">📍 Srinagar, Jammu & Kashmir</p>
-      </div>
-    </section>
-
-    <footer class="bg-gray-900 text-white text-center py-4">
-      © 2026 Wasturwan Travels. All Rights Reserved.
-    </footer>
-
-    <!-- WhatsApp Floating -->
-    <a
-      href="https://wa.me/917006594976"
-      target="_blank"
-      class="whatsapp-float"
-      aria-label="WhatsApp"
-      ><img
-        src="https://img.icons8.com/color/48/000000/whatsapp.png"
-        alt="WhatsApp"
-        style="width: 24px; height: 24px"
-    /></a>
-
-    <!-- BOOKING MODAL -->
-    <div id="bookingModal" class="fixed inset-0 hidden z-50" aria-hidden="true">
-      <div
-        style="position: fixed; inset: 0; background: rgba(3, 7, 18, 0.5)"
-      ></div>
-      <div
-        class="container"
-        style="
-          position: relative;
-          max-width: 480px;
-          margin: 80px auto;
-          z-index: 60;
-        "
-      >
-        <div class="card modal-inner">
-          <button
-            id="closeModal"
-            style="
-              float: right;
-              border: none;
-              background: none;
-              font-size: 20px;
-            "
-          >
-            ✕
-          </button>
-          <h3
-            style="text-align: center; margin: 6px 0 14px; font-size: 1.25rem"
-          >
-            Book Your Trip
-          </h3>
-          <form id="bookingForm">
-            <input type="hidden" id="selectedPackage" />
-            <div style="display: grid; gap: 10px">
-              <input type="text" id="name" required placeholder="Your Name" />
-              <input
-                type="tel"
-                id="phone"
-                required
-                placeholder="Phone Number"
-              />
-              <input type="date" id="date" required />
-              <textarea
-                id="message"
-                placeholder="Any special request (optional)"
-              ></textarea>
-              <div style="margin: 10px 0">
-                <label style="display: block; margin-bottom: 5px">
-                  <input
-                    type="radio"
-                    name="contactMethod"
-                    value="whatsapp"
-                    checked
-                    style="margin-right: 8px"
-                  />
-                  📱 Send via WhatsApp
-                </label>
-                <label style="display: block">
-                  <input
-                    type="radio"
-                    name="contactMethod"
-                    value="email"
-                    style="margin-right: 8px"
-                  />
-                  ✉️ Send via Gmail
-                </label>
-              </div>
-              <button type="submit" class="btn-primary">
-                📩 Send Booking Inquiry
-              </button>
-            </div>
-          </form>
-        </div>
+        <span>Call us: +91 7006594976</span>
+        <span>Email: wasturwantravels@gmail.com</span>
       </div>
     </div>
 
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="logo">Wasturwan<span>Travels</span></div>
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#tours">Tours</a>
+          <a href="#packages">Packages</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="btn-primary" onclick="openBooking()">Book Now</a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="swiper hero-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div
+              class="hero-slide"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920');
+              "
+            >
+              <div class="hero-overlay"></div>
+              <div class="hero-content">
+                <h1 data-aos="fade-up" data-aos-delay="200">
+                  Explore the World
+                </h1>
+                <p data-aos="fade-up" data-aos-delay="400">
+                  Discover amazing destinations
+                </p>
+                <a
+                  class="btn-primary"
+                  href="#packages"
+                  data-aos="fade-up"
+                  data-aos-delay="600"
+                  >View Packages</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="hero-slide"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1548013146-72479768bada?w=1920');
+              "
+            >
+              <div class="hero-overlay"></div>
+              <div class="hero-content">
+                <h1 data-aos="fade-up" data-aos-delay="200">
+                  Adventure Awaits
+                </h1>
+                <p data-aos="fade-up" data-aos-delay="400">
+                  Experience the thrill of travel
+                </p>
+                <a
+                  class="btn-primary"
+                  href="#packages"
+                  data-aos="fade-up"
+                  data-aos-delay="600"
+                  >Explore Now</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="hero-slide"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1562577309-2592ab84b1bc?w=1920');
+              "
+            >
+              <div class="hero-overlay"></div>
+              <div class="hero-content">
+                <h1 data-aos="fade-up" data-aos-delay="200">Family Memories</h1>
+                <p data-aos="fade-up" data-aos-delay="400">
+                  Create unforgettable moments
+                </p>
+                <a
+                  class="btn-primary"
+                  href="#packages"
+                  data-aos="fade-up"
+                  data-aos-delay="600"
+                  >Plan Trip</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+
+    <!-- Holiday Categories -->
+    <section class="categories section" id="categories">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Holiday Categories</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+          Choose your perfect getaway
+        </p>
+        <div class="category-grid">
+          <div class="category-card" data-aos="fade-up" data-aos-delay="300">
+            <img
+              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400"
+              alt="Adventure"
+            />
+            <div class="category-overlay">
+              <h3>Adventure Tours</h3>
+              <span>25 Tours</span>
+            </div>
+          </div>
+          <div class="category-card" data-aos="fade-up" data-aos-delay="400">
+            <img
+              src="https://images.unsplash.com/photo-1548013146-72479768bada?w=400"
+              alt="Honeymoon"
+            />
+            <div class="category-overlay">
+              <h3>Honeymoon Packages</h3>
+              <span>18 Tours</span>
+            </div>
+          </div>
+          <div class="category-card" data-aos="fade-up" data-aos-delay="500">
+            <img
+              src="https://images.unsplash.com/photo-1562577309-2592ab84b1bc?w=400"
+              alt="Family"
+            />
+            <div class="category-overlay">
+              <h3>Family Tours</h3>
+              <span>32 Tours</span>
+            </div>
+          </div>
+          <div class="category-card" data-aos="fade-up" data-aos-delay="600">
+            <img
+              src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?w=400"
+              alt="Cultural"
+            />
+            <div class="category-overlay">
+              <h3>Cultural Tours</h3>
+              <span>15 Tours</span>
+            </div>
+          </div>
+          <div class="category-card" data-aos="fade-up" data-aos-delay="700">
+            <img
+              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400"
+              alt="Wildlife"
+            />
+            <div class="category-overlay">
+              <h3>Wildlife Safaris</h3>
+              <span>12 Tours</span>
+            </div>
+          </div>
+          <div class="category-card" data-aos="fade-up" data-aos-delay="800">
+            <img
+              src="https://images.unsplash.com/photo-1548013146-72479768bada?w=400"
+              alt="Beach"
+            />
+            <div class="category-overlay">
+              <h3>Beach Holidays</h3>
+              <span>20 Tours</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Promotional Section -->
+    <section class="promo section" id="about">
+      <div class="container">
+        <div class="promo-content">
+          <div class="promo-text" data-aos="fade-right">
+            <h2>Special Discount</h2>
+            <p>
+              Get 20% off on all packages this season. Book now and save big on
+              your dream vacation.
+            </p>
+            <a class="btn-primary" onclick="openBooking()">Book Now</a>
+          </div>
+          <div class="promo-image" data-aos="fade-left">
+            <img
+              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600"
+              alt="Promo"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Most Popular Tours -->
+    <section class="tours section" id="tours">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Most Popular Tours</h2>
+        <div class="tour-grid">
+          <div class="tour-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="tour-image">
+              <img
+                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400"
+                alt="Tour"
+              />
+              <span class="featured">Featured</span>
+            </div>
+            <div class="tour-content">
+              <h3>Srinagar to Srinagar</h3>
+              <p>Srinagar, Kashmir</p>
+              <div class="tour-icons">
+                <span>✈️</span>
+                <span>🏨</span>
+                <span>🍽️</span>
+                <span>🚗</span>
+                <span>📸</span>
+              </div>
+              <div class="tour-details">
+                <span>5 Days / 4 Nights</span>
+                <span>₹24,999 per couple</span>
+              </div>
+              <p>Shikara ride 1 hour included</p>
+              <a class="btn-primary" onclick="openBooking()">Book Now</a>
+            </div>
+          </div>
+          <div class="tour-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="tour-image">
+              <img
+                src="https://images.unsplash.com/photo-1548013146-72479768bada?w=400"
+                alt="Tour"
+              />
+              <span class="featured">Featured</span>
+            </div>
+            <div class="tour-content">
+              <h3>Jammu to Jammu</h3>
+              <p>Jammu, India</p>
+              <div class="tour-icons">
+                <span>✈️</span>
+                <span>🏨</span>
+                <span>🍽️</span>
+                <span>🚗</span>
+                <span>📸</span>
+              </div>
+              <div class="tour-details">
+                <span>6 Days / 5 Nights</span>
+                <span>₹32,999 per couple</span>
+              </div>
+              <p>Shikara ride 1 hour included</p>
+              <a class="btn-primary" onclick="openBooking()">Book Now</a>
+            </div>
+          </div>
+          <div class="tour-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="tour-image">
+              <img
+                src="https://images.unsplash.com/photo-1562577309-2592ab84b1bc?w=400"
+                alt="Tour"
+              />
+              <span class="featured">Featured</span>
+            </div>
+            <div class="tour-content">
+              <h3>Family Suit Srinagar to Srinagar</h3>
+              <p>Srinagar, Kashmir</p>
+              <div class="tour-icons">
+                <span>✈️</span>
+                <span>🏨</span>
+                <span>🍽️</span>
+                <span>🚗</span>
+                <span>📸</span>
+              </div>
+              <div class="tour-details">
+                <span>6 Days / 5 Nights</span>
+                <span>₹9,999 per person</span>
+              </div>
+              <p>Shikara ride 1 hour included</p>
+              <a class="btn-primary" onclick="openBooking()">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Adventure CTA -->
+    <section class="adventure-cta" id="adventure">
+      <div class="adventure-overlay"></div>
+      <div class="container">
+        <h2 data-aos="fade-up">Adventure Awaits</h2>
+        <p data-aos="fade-up" data-aos-delay="200">
+          Experience the thrill of adventure
+        </p>
+        <div class="adventure-features">
+          <div class="feature-box" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-icon">🦌</div>
+            <h4>Wildlife Tours</h4>
+          </div>
+          <div class="feature-box" data-aos="fade-up" data-aos-delay="400">
+            <div class="feature-icon">🪂</div>
+            <h4>Paragliding Tours</h4>
+          </div>
+          <div class="feature-box" data-aos="fade-up" data-aos-delay="500">
+            <div class="feature-icon">🏔️</div>
+            <h4>Adventure Tours</h4>
+          </div>
+          <div class="feature-box" data-aos="fade-up" data-aos-delay="600">
+            <div class="feature-icon">🪁</div>
+            <h4>Hang Gliding Tours</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Why Choose Us</h2>
+        <div class="features-grid">
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-icon">👥</div>
+            <h3>Expert Guides</h3>
+            <p>Professional guides with years of experience</p>
+          </div>
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-icon">💰</div>
+            <h3>Best Prices</h3>
+            <p>Competitive pricing with no hidden costs</p>
+          </div>
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="feature-icon">🛡️</div>
+            <h3>Safe Travel</h3>
+            <p>Your safety is our top priority</p>
+          </div>
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="feature-icon">⭐</div>
+            <h3>5-Star Service</h3>
+            <p>Exceptional service from start to finish</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+      <div class="container">
+        <h2 data-aos="fade-up">Ready for Your Next Adventure?</h2>
+        <a
+          class="btn-primary"
+          href="#contact"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          >Get Started</a
+        >
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4>Support</h4>
+            <p>Help Center</p>
+            <p>Contact Us</p>
+          </div>
+          <div class="footer-col">
+            <h4>Address</h4>
+            <p>123 Travel Street</p>
+            <p>City, State 12345</p>
+          </div>
+          <div class="footer-col">
+            <h4>Tour Links</h4>
+            <p>Adventure Tours</p>
+            <p>Family Tours</p>
+          </div>
+          <div class="footer-col">
+            <h4>Useful Links</h4>
+            <p>About Us</p>
+            <p>Privacy Policy</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="payment-icons">
+            <span>💳</span>
+            <span>💳</span>
+            <span>💳</span>
+          </div>
+          <div class="social-icons">
+            <span>📘</span>
+            <span>🐦</span>
+            <span>📷</span>
+          </div>
+          <p>
+            &copy; 2024 Wasturwan Travels. All rights reserved. | Contact:
+            Mudasir Mukhtar
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div class="modal" id="bookingModal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeBooking()">×</span>
+        <h2>Book Your Trip</h2>
+        <form id="bookingForm">
+          <input
+            type="text"
+            id="name"
+            name="Name"
+            placeholder="Your Name"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            name="Email"
+            placeholder="Your Email"
+            required
+          />
+          <input
+            type="text"
+            id="destination"
+            name="Destination"
+            placeholder="Destination"
+          />
+          <textarea
+            id="message"
+            name="Message"
+            placeholder="Message"
+          ></textarea>
+          <button type="button" class="btn-primary" onclick="sendViaEmail()">
+            Send via Email
+          </button>
+          <button type="button" class="btn-primary" onclick="sendViaWhatsApp()">
+            Send via WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/917006594976" class="whatsapp-float" target="_blank">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+        alt="WhatsApp"
+      />
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
